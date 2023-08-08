@@ -37,6 +37,11 @@ form button{
 }
 body{
   background-color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50vh;
+  justify-content: center;
 }
 .title h1{
   display: flex;
@@ -48,10 +53,7 @@ body{
 }
 
 /* Animation Active */
-.Animate_Active{
-  animation-name: sample;
-  animation-duration: 1s;
-}
+
 
 @keyframes sample{
   10%{
@@ -63,4 +65,28 @@ body{
 }
 button:active{
   transform: scale(1.05);
+}
+#Output{
+width: 40%;
+ display: flex;
+ flex-direction: column;
+ border: solid 1px wheat;
+ color: wheat;
+ border-radius: 10px;
+ padding: 10px;
+ display: none;
+ 
+}
+.Animate_Active{
+  animation-name: sample;
+  animation-duration: 1s;
+}
+#Output h1{
+letter-spacing: 4px;
+}
+@media (width <= 600px){
+  #Output{
+    width: 80%;
+  }
+  
 }
